@@ -39,7 +39,7 @@ Chile_511	PAW71368
 Chile_516	PAW71977
 ```
 ## Data organization per cohort
-We inititially transfer raw ONT data to cohort folders (e.g., /data/CARDPB/data/RUSH) and then organize this data in the following manner (modified output of tree -d -L 2 in the cohort directory):
+We initially transfer raw ONT data to cohort folders (e.g., /data/CARDPB/data/RUSH) and then organize this data in the following manner (modified output of tree -d -L 2 in the cohort directory):
 ```
 .
 ├── POD5
@@ -152,7 +152,7 @@ In addition to variant calling, we also call DNA modifications (primarily methyl
 modkit pileup --cpg --ref /data/CARDPB/resources/hg38/GCA_000001405.15_GRCh38_no_alt_analysis_set.fa --only-tabs --threads 24 --ignore h --combine-strands --partition-tag HP --prefix ${SAMPLE_ID}_${FLOWCELL} ${BAM_FILE} ${OUT}
 ```
 ## Compute resource use summary
-The estimates below are based on one 30x coverage sample (except for SNV calling - 1 sample alignment subsetted for a particular choromosome) and are generous especially concerning time (i.e., more resources provided than necessary).
+The estimates below are based on one 30x coverage sample (except for SNV calling - 1 sample alignment subsetted for a particular chromosome) and are generous especially concerning time (i.e., more resources provided than necessary).
 | Data processing step | Dependencies | Memory | CPUs | GPUs | Local scratch | Time allocation | Input type |
 | -------------------- | ------------ | ------ | ---- | ---- | ------------- | --------------- | ---------- |
 | Basecalling | Dorado 0.9.0, pod5 0.3.6 | 120GB | 30 | 2 A100 | 50GB | 2 days | Whole genome (30x coverage) |
