@@ -22,7 +22,8 @@ python3 CARDlongread_extract_summary_statistics.py -input example_output.tsv -ou
 ```
 # Data processing
 ## Flowchart overview
-![Data processing workflow overview](https://github.com/user-attachments/assets/651d751a-c071-4a88-a399-bd22a8a7d108)
+<!-- ![Data processing workflow overview](https://github.com/user-attachments/assets/651d751a-c071-4a88-a399-bd22a8a7d108) -->
+![Data processing workflow overview](<Data processing workflow expanded overview 2026.svg>)
 ## Sample sheet
 The next downstream three steps depend upon a samplesheet file with a list of sample names and flow cells. This is a headerless (no column names) TSV file with sample names in the first column and flow cells in the second. This can be prepared from the sequencing QC TSV output shown above like so:
 ```
