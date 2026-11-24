@@ -20,7 +20,8 @@ BGZIP_THREADS=60
 
 # parallelize by chromosome
 # make sure to make array
-CHROMOSOMES=($(cut -f1 /data/mollerabg/GRCh38_per_chromosome_beds/GRCh38_CARD_ref.bed))
+# need BED file of reference genome coordinates
+CHROMOSOMES=($(cut -f1 /data/${USER}/GRCh38_per_chromosome_beds/GRCh38_CARD_ref.bed))
 N=${SLURM_ARRAY_TASK_ID}
 CURRENT_CHROMOSOME=${CHROMOSOMES[$((N-1))]}
 
