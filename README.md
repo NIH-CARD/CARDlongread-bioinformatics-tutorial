@@ -132,6 +132,9 @@ Usage: ./microarray_liftover_by_rsID_with_dbSNP.sh -d [dbSNP VCF] -r [reference 
 	-t Threads assigned to Plink and bcftools (optional, default 8)
 ```
 
+You can download the most recent dbSNP build in VCF format from NCBI FTP here: https://ftp.ncbi.nlm.nih.gov/snp/latest_release/VCF/
+The provided dbSNP builds are further described here: https://ftp.ncbi.nlm.nih.gov/snp/00readme.txt
+
 ## Alignment phasing
 Phasing is the process of assigning aligned reads, variant calls, and methylation calls to each haplotype (maternal and paternal) based on variants called from read alignments and/or assemblies. We primarily phase mapped BAM alignments using PEPPER-Margin-DeepVariant (PMDV) 0.8. Margin uses read-based evidence of linkage between heterozygous variant sites to assign the most likely haplotypes for reads and alleles (https://github.com/UCSC-nanopore-cgl/margin). A sample phasing script using PMDV is included. We have recently started using marginPhase with an ONT R10.4.1 preset on single samples and will include a margin phasing script that can be run on variants from any caller.
 
